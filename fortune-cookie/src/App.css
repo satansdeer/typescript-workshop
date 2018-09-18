@@ -1,0 +1,108 @@
+.App {
+  text-align: center;
+}
+
+.fortune-cookie-wrapper {
+  margin-bottom: 40px;
+}
+
+.cookie-wrapper {
+  height: 100px;
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+
+.cookie-paper {
+  background-color: #e9f2ff;
+  max-height: min-content;
+  padding: 6px 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #606060;
+}
+
+.cookie-image {
+  position: absolute;
+  left: 50%;
+  max-width: 0;
+  transition: none;
+  height: 100px;
+  padding: 20px 50px;
+  transform: translate3d(-50%, 0, 0);
+}
+
+.cookie-image.is-open {
+  animation: cookie 2s linear 0.3s 1 forwards;
+}
+
+@keyframes cookie {
+  0% {
+    max-width: 0;
+  }
+
+  10% {
+    max-width: 0;
+  }
+
+  100% {
+    max-width: 500px;
+  }
+}
+
+@keyframes cookie-right {
+  0% {
+    transform: rotate(0) translateX(0);
+  }
+
+  10% {
+    transform: rotate(10deg) translateX(-8px);
+  }
+
+  100% {
+    transform: rotate(10deg) translateX(-8px);
+  }
+}
+
+@keyframes cookie-left {
+  0% {
+    transform: rotate(0) translateX(0);
+  }
+
+  10% {
+    transform: rotate(-10deg) translateX(8px);
+  }
+
+  100% {
+    transform: rotate(-10deg) translateX(8px);
+  }
+}
+
+.cookie-image::before,
+.cookie-image::after {
+  border-radius: 50%;
+  content: "";
+  height: 100px;
+  position: absolute;
+  top: 0;
+  width: 100px;
+}
+
+.cookie-image::after {
+  background-color: #e6b24a;
+  clip-path: inset(-50% -50% 10% 50% round 100%);
+  right: 0;
+}
+
+.cookie-image.is-open::after {
+  animation: cookie-left 2s linear 0.3s 1 forwards;
+}
+
+.cookie-image::before {
+  background-color: #f4d15c;
+  clip-path: inset(-50% 50% 10% -50% round 100%);
+  left: 0;
+}
+
+.cookie-image.is-open::before {
+  animation: cookie-right 2s linear 0.3s 1 forwards;
+}

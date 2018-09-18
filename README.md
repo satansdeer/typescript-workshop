@@ -15,6 +15,8 @@ Me - Maksim, blablabla...
 
 VScode supports typescript highlighting, you only need to install the typescript compiler.
 
+Don't forget to create vscode workspace.
+
 ```
 npm install -g typescript
 ```
@@ -41,6 +43,8 @@ tsc greet.ts
 node greet.js
 ```
 
+Install prettier plugin.
+
 ## Tsconfig
 
 Given no arguments, tsc will first check `tsconfig.json` for instructions. When it finds the config, it uses those settings to build the project.
@@ -65,6 +69,8 @@ In the compiler options, a target of es6 has been set. This means that the JavaS
 ## Quick Intro To Static Typing
 
 ## ACTIVITY: Make simple counter app
+
+Don't use class property state
 
 ## Learn About Typescript And React
 
