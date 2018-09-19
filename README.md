@@ -23,7 +23,7 @@ Me - Maksim, blablabla...
 - How to convert existing project from typescript
 - We are not going to cover all the Typescript features
 
-## ACTIVITY: Setup VSCode and Typescript
+## Install Typescript
 
 VScode supports typescript highlighting, you only need to install the typescript compiler.
 
@@ -57,11 +57,19 @@ node greet.js
 
 Install prettier plugin.
 
+Update settings:
+
 - Editor: Format on save.
 
 Install tslint.
 
 ## Quick Intro To Static Typing
+
+Benefits of using typescript:
+
+- Catching mistakes before running app.
+- Smart editor hints.
+- Prevents errors on large codebases.
 
 ## ACTIVITY: Make simple counter app
 
@@ -93,10 +101,6 @@ Given no arguments, tsc will first check `tsconfig.json` for instructions. When 
 ## ACTIVITY: Make a magic cookie app (event.target typing)
 
 [demo](https://peaceful-elion-614709.netlify.com/)
-
----
-
-- tsx - for jsx
 
 - import \* as React from 'react'
 - import \* as ReactDOM from 'react-dom'
