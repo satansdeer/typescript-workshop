@@ -2,20 +2,30 @@
 
 ## Prerequisites
 
-* Node and npm installed
-* VSCode installed
+- Node and npm installed
+- VSCode installed
+- Basic React knowledge
 
 ---
 
-## Intro (about me, what we are going to learn)
+## Intro
 
 Me - Maksim, blablabla...
+
+## What Will We Learn
+
+- How to bootstrap typescript-react app
+- What are main differences from regular react app
+- How to use type definitions for external libraries
+
+## What Are We Not Going To learn
+
+- How to convert existing project from typescript
+- We are not going to cover all the Typescript features
 
 ## ACTIVITY: Setup VSCode and Typescript
 
 VScode supports typescript highlighting, you only need to install the typescript compiler.
-
-Don't forget to create vscode workspace.
 
 ```
 npm install -g typescript
@@ -31,10 +41,10 @@ Let's try it out, create file `greet.ts`:
 
 ```ts
 function greet(name: string) {
-    return "Hello, " + name;
+  return "Hello, " + name;
 }
 
-greet('Maksim')
+greet("Maksim");
 ```
 
 ```sh
@@ -43,53 +53,55 @@ tsc greet.ts
 node greet.js
 ```
 
+## Setup VSCode
+
 Install prettier plugin.
 
-## Tsconfig
+- Editor: Format on save.
 
-Given no arguments, tsc will first check `tsconfig.json` for instructions. When it finds the config, it uses those settings to build the project.
-
-Create file `tsconfig.json`
-
-```
-{
-  "compilerOptions": {
-    "target": "es6",
-    "jsx": "react",
-    "module": "commonjs"
-  },
-  "exclude": [
-    "node_modules"
-  ]
-}
-```
-
-In the compiler options, a target of es6 has been set. This means that the JavaScript engine target will be set to es6, and the module will be set to CommonJS. Notice that there is also a key called JSX which is set to react. This Tells typescript to compile jsx files as react files. This is similar to running tsc — jsx react .
+Install tslint.
 
 ## Quick Intro To Static Typing
 
 ## ACTIVITY: Make simple counter app
 
-Don't use class property state
+[demo](https://relaxed-goldberg-269236.netlify.com/)
+
+Create new app using `create-react-app . --scripts-version=react-scripts-ts`.
+
+Don't forget to create vscode workspace.
+
+- Drag/drop folder to VSCode.
+- Open folder in VScode and press add folder to workspace.
+- run `code .` in project folder.
+
+### Things To Note
+
+- You'll have to define member access levels for class properties (private/public/protected)
+
+### Tsconfig
+
+Given no arguments, tsc will first check `tsconfig.json` for instructions. When it finds the config, it uses those settings to build the project.
 
 ## Learn About Typescript And React
 
-`import * as React from "react";` - how to make it `import React from 'react'` again.
+`import * as React from "react";`
 
 ## Learn about generics
 
 ## ACTIVITY: Make a magic cookie app (event.target typing)
 
--------
+!!! DEMO APP SHOULD BE ON NETLIFY !!!
 
-* tsx - for jsx
+---
 
-* import * as React from 'react'
-* import * as ReactDOM from 'react-dom'
+- tsx - for jsx
 
-* React.SFC<IProps> = (props: IProps) => {}
+- import \* as React from 'react'
+- import \* as ReactDOM from 'react-dom'
 
-* default props 
+- React.SFC<IProps> = (props: IProps) => {}
 
-* class component - has state
+- default props
 
+- class component - has state

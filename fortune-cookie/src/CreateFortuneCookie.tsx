@@ -1,5 +1,4 @@
 import * as React from "react";
-import "./button.css";
 
 interface IFortuneCookieProps {
   onAddFortuneCookie: (fortune: string) => void;

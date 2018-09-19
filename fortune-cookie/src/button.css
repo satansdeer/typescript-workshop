@@ -1,4 +1,4 @@
-.button {
+button {
   background: none;
   border: 3px solid #613f27;
   height: 40px;
@@ -8,7 +8,7 @@
   color: #4f3320;
 }
 
-.button:disabled {
+button:disabled {
   color: #734b2f;
   border-color: #734b2f;
 }
