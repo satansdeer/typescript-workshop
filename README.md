@@ -85,29 +85,23 @@ Don't forget to create vscode workspace.
 
 ### Things To Note
 
+- tsconfig and tslint files.
 - Js files became ts, JSX became TSX
 - You'll have to define member access levels for class properties (private/public/protected)
 - We use generics to specify props and state types. [Read about generics](https://www.typescriptlang.org/docs/handbook/generics.html)
 
-### Tsconfig
-
-Given no arguments, tsc will first check `tsconfig.json` for instructions. When it finds the config, it uses those settings to build the project.
-
-## Learn About Typescript And React
-
-`import * as React from "react";`
-
-## Learn about generics
+```ts
+function identity<T>(arg: T): T {
+  return arg;
+}
+```
 
 ## ACTIVITY: Make a magic cookie app (event.target typing)
 
 [demo](https://peaceful-elion-614709.netlify.com/)
 
-- import \* as React from 'react'
-- import \* as ReactDOM from 'react-dom'
-
 - React.SFC<IProps> = (props: IProps) => {}
 
-- default props
+## Worth Noting
 
-- class component - has state
+Since version 3.0 Typescript has defaultProps support - [read here](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-0.html)
