@@ -69,7 +69,7 @@ Benefits of using typescript:
 
 - Catching mistakes before running app.
 - Smart editor hints.
-- Prevents errors on large codebases.
+- Allows to define interfaces. Prevents errors on large codebases.
 
 ## ACTIVITY: Make simple counter app
 
@@ -87,6 +87,7 @@ Don't forget to create vscode workspace.
 
 - Js files became ts, JSX became TSX
 - You'll have to define member access levels for class properties (private/public/protected)
+- We use generics to specify props and state types. [Read about generics](https://www.typescriptlang.org/docs/handbook/generics.html)
 
 ### Tsconfig
 
