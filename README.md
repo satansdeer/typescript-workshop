@@ -77,6 +77,7 @@ Don't forget to create vscode workspace.
 
 ### Things To Note
 
+- Js files became ts, JSX became TSX
 - You'll have to define member access levels for class properties (private/public/protected)
 
 ### Tsconfig
@@ -91,7 +92,7 @@ Given no arguments, tsc will first check `tsconfig.json` for instructions. When 
 
 ## ACTIVITY: Make a magic cookie app (event.target typing)
 
-!!! DEMO APP SHOULD BE ON NETLIFY !!!
+[demo](https://peaceful-elion-614709.netlify.com/)
 
 ---
 
