@@ -41,7 +41,7 @@ Let's try it out, create file `greet.ts`:
 
 ```ts
 function greet(name: string) {
-  return "Hello, " + name;
+  console.log("Hello, " + name);
 }
 
 greet("Maksim");
@@ -70,6 +70,10 @@ Benefits of using typescript:
 - Catching mistakes before running app.
 - Smart editor hints.
 - Allows to define interfaces. Prevents errors on large codebases.
+
+## Reference
+
+[Typescript Handbook](https://www.typescriptlang.org/docs/handbook/basic-types.html)
 
 ## ACTIVITY: Make simple counter app
 
