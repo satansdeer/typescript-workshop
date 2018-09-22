@@ -86,7 +86,7 @@ Benefits of using TypeScript:
 
 [demo](https://relaxed-goldberg-269236.netlify.com/)
 
-Create a new app using `create-react-app . --scripts-version=react-scripts-ts`.
+Create a new app using `npx create-react-app . --scripts-version=react-scripts-ts`.
 
 Don't forget to create the vscode workspace.
 
