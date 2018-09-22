@@ -1,4 +1,4 @@
-# Typescript - React Workshop
+# TypeScript - React Workshop
 
 ## Prerequisites
 
@@ -12,20 +12,24 @@
 
 Me - Maksim, blablabla...
 
-## What Will We Learn
+### What Will We Learn
 
-- How to bootstrap typescript-react app
-- What are main differences from regular react app
+- How to bootstrap an app using the typescript-react app
+- What the main differences between a regular react app is
 - How to use type definitions for external libraries
 
-## What Are We Not Going To learn
+### What We Are Not Going To learn
 
-- How to convert existing project from typescript
-- We are not going to cover all the Typescript features
+- How to convert existing projects from TypeScript
+- How to use all of TypeScript's features
 
-## Install Typescript
+---
 
-VScode supports typescript highlighting, you only need to install the typescript compiler.
+## Getting started
+
+### Install TypeScript
+
+VScode supports TypeScript highlighting, you only need to install the TypeScript compiler.
 
 ```
 npm install -g typescript
@@ -37,7 +41,7 @@ To verify - run
 tsc --v
 ```
 
-Let's try it out, create file `greet.ts`:
+Let's try it out, create a file called `greet.ts`:
 
 ```ts
 function greet(name: string) {
@@ -53,7 +57,7 @@ tsc greet.ts
 node greet.js
 ```
 
-## Setup VSCode
+### Setup VSCode
 
 Install prettier plugin.
 
@@ -63,31 +67,34 @@ Update settings:
 
 Install tslint.
 
+
 ## Quick Intro To Static Typing
 
-Benefits of using typescript:
+Benefits of using TypeScript:
 
 - Catching mistakes before running app.
 - Smart editor hints.
-- Allows to define interfaces. Prevents errors on large codebases.
+- Allows us to define interfaces. Prevents errors in large codebases.
 
-## Reference
+## References
 
-[Typescript Handbook](https://www.typescriptlang.org/docs/handbook/basic-types.html)
+[TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/basic-types.html)
 
-## ACTIVITY: Make simple counter app
+## Activities
+
+### Make a simple counter app
 
 [demo](https://relaxed-goldberg-269236.netlify.com/)
 
-Create new app using `create-react-app . --scripts-version=react-scripts-ts`.
+Create a new app using `create-react-app . --scripts-version=react-scripts-ts`.
 
-Don't forget to create vscode workspace.
+Don't forget to create the vscode workspace.
 
 - Drag/drop folder to VSCode.
 - Open folder in VScode and press add folder to workspace.
 - run `code .` in project folder.
 
-### Things To Note
+#### Woth Noting
 
 - tsconfig and tslint files.
 - Js files became ts, JSX became TSX
@@ -100,12 +107,12 @@ function identity<T>(arg: T): T {
 }
 ```
 
-## ACTIVITY: Make a magic cookie app (event.target typing)
+### Make a magic cookie app (event.target typing)
 
 [demo](https://peaceful-elion-614709.netlify.com/)
 
 - React.SFC<IProps> = (props: IProps) => {}
 
-## Worth Noting
+#### Worth Noting
 
-Since version 3.0 Typescript has defaultProps support - [read here](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-0.html)
+Since version 3.0 TypeScript has defaultProps support - [read here](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-0.html)
