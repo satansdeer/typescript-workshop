@@ -94,7 +94,7 @@ Don't forget to create the vscode workspace.
 - Open folder in VScode and press add folder to workspace.
 - run `code .` in project folder.
 
-#### Woth Noting
+#### Worth Noting
 
 - tsconfig and tslint files.
 - Js files became ts, JSX became TSX
@@ -113,6 +113,6 @@ function identity<T>(arg: T): T {
 
 - React.SFC<IProps> = (props: IProps) => {}
 
-#### Worth Noting
+## Worth Noting
 
 Since version 3.0 TypeScript has defaultProps support - [read here](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-0.html)
