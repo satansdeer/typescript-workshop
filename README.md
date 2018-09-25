@@ -15,8 +15,8 @@ Me - Maksim, blablabla...
 ### What Will We Learn
 
 - How to bootstrap an app using the typescript-react app
-- What the main differences between a regular react app is
-- How to use type definitions for external libraries
+- What are key differences between a regular react app and typescript app.
+- How to use type definitions for external libraries.
 
 ### What We Are Not Going To learn
 
@@ -25,7 +25,7 @@ Me - Maksim, blablabla...
 
 ---
 
-## Getting started
+## Getting Started
 
 ### Install TypeScript
 
@@ -40,6 +40,8 @@ To verify - run
 ```
 tsc --v
 ```
+
+### Try TypeScript
 
 Let's try it out, create a file called `greet.ts`:
 
@@ -81,7 +83,7 @@ Benefits of using TypeScript:
 
 ## Activities
 
-### Make a sample app
+### Make A Sample App
 
 Create a new app using `npx create-react-app <app-name> --scripts-version=react-scripts-ts`.
 
@@ -94,8 +96,8 @@ Don't forget to create the vscode workspace.
 #### Worth Noting
 
 - `tsconfig.json` and `tslint.json` files.
-- Js files became ts, JSX became TSX
-- You'll have to define member access levels for class properties (private/public/protected)
+- `js` files became `ts`, `JSX` became `TSX`
+- You'll have to define member access levels for class properties (`private | public | protected`)
 - We use generics to specify props and state types. [Read about generics](https://www.typescriptlang.org/docs/handbook/generics.html)
 
 ```ts
@@ -108,16 +110,50 @@ function identity<T>(arg: T): T {
 
 [Counter App Demo](https://relaxed-goldberg-269236.netlify.com/)
 
-### TODO
+Open folder `./simple-counter-exercise`.
+
+#### TODO
 
 - [ ] Define the ICounterProps interface. It should include the `state` field of type `number`
 - [ ] Set proper visibility levels for class properties `public | protected | private`
 
-### Make a magic cookie app (event.target typing)
+### Make A Magic Cookie App
 
-[demo](https://peaceful-elion-614709.netlify.com/)
+[Magic Cookie App Demo](https://peaceful-elion-614709.netlify.com/)
 
-- React.SFC<IProps> = (props: IProps) => {}
+Open folder `./fortune-cookie-exercise`.
+
+#### TODO
+
+- [ ] `App.tsx`
+
+  - [ ] Define and use the `IFortuneCookieState`. It should have a `string` attribute `randomFortune` and `fortuneCookies` list as `array` of `strings`.
+  - [ ] Add proper member visibility types to App methods.
+
+- [ ] `CreateFortuneCookie.tsx`
+
+  - [ ] Implement "IFortuneCookieProps" interface. It should accept `onAddFortuneCookie` function.
+  - [ ] Implement `IFortuneCookieState`. It should have `string` field `cookieText`.
+  - [ ] Add proper member visibility types to `CreateFortuneCookie` methods.
+
+- [ ] `FortuneCookieText.tsx`
+
+  - [ ] Define the `IFortuneCookieTextProps`. It should have the `text` field of `string` type.
+  - [ ] Define the `FortuneCookieText` stateless functional component with following layout
+
+  ```html
+    <div className="cookie-wrapper">
+      <div className={`cookie-image ${text ? "is-open" : ""}`}>
+        <div className="cookie-paper">{text}</div>
+      </div>
+    </div>
+  ```
+
+  Example stateless functional component:
+
+  ```typescript
+  const example: React.SFC<IProps> = (props: IProps) => {};
+  ```
 
 ## Worth Noting
 
