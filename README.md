@@ -67,7 +67,6 @@ Update settings:
 
 Install tslint.
 
-
 ## Quick Intro To Static Typing
 
 Benefits of using TypeScript:
@@ -82,21 +81,19 @@ Benefits of using TypeScript:
 
 ## Activities
 
-### Make a simple counter app
+### Make a sample app
 
-[demo](https://relaxed-goldberg-269236.netlify.com/)
-
-Create a new app using `npx create-react-app . --scripts-version=react-scripts-ts`.
+Create a new app using `npx create-react-app <app-name> --scripts-version=react-scripts-ts`.
 
 Don't forget to create the vscode workspace.
 
 - Drag/drop folder to VSCode.
 - Open folder in VScode and press add folder to workspace.
-- run `code .` in project folder.
+- Run `code .` in project folder.
 
 #### Worth Noting
 
-- tsconfig and tslint files.
+- `tsconfig.json` and `tslint.json` files.
 - Js files became ts, JSX became TSX
 - You'll have to define member access levels for class properties (private/public/protected)
 - We use generics to specify props and state types. [Read about generics](https://www.typescriptlang.org/docs/handbook/generics.html)
@@ -106,6 +103,15 @@ function identity<T>(arg: T): T {
   return arg;
 }
 ```
+
+### Make a simple counter app
+
+[Counter App Demo](https://relaxed-goldberg-269236.netlify.com/)
+
+### TODO
+
+- [ ] Define the ICounterProps interface. It should include the `state` field of type `number`
+- [ ] Set proper visibility levels for class properties `public | protected | private`
 
 ### Make a magic cookie app (event.target typing)
 

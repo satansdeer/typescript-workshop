@@ -9,17 +9,14 @@ import "./textInput.css";
 // should have a string attribute "randomFortune"
 // and "fortuneCookies" list as array of strings
 
-class App extends React.Component<{}, any> {
-  public state = { randomFortune: "", fortuneCookies: [] };
+// Add proper member visibility types to App methods
 
-  public render() {
+class App extends React.Component<{}, any> {
+  render() {
     return (
       <div className="App">
         <div className="fortune-cookie-wrapper">
-          <FortuneCookieText
-            key={this.state.randomFortune}
-            text={this.state.randomFortune}
-          />
+          <FortuneCookieText text={this.state.randomFortune} />
           <button
             className="button"
             disabled={!this.state.fortuneCookies.length}
@@ -34,12 +31,18 @@ class App extends React.Component<{}, any> {
     );
   }
 
-  private getRandomCookie = () => {
-    // Implement the function body
+  getRandomCookie = () => {
+    const { fortuneCookies } = this.state;
+    this.setState({
+      randomFortune:
+        fortuneCookies[Math.floor(fortuneCookies.length * Math.random())]
+    });
   };
 
-  private addFortuneCookie = (fortune: string) => {
-    // Implement the function body
+  addFortuneCookie = (fortune: string) => {
+    this.setState(oldState => ({
+      fortuneCookies: [...oldState.fortuneCookies, fortune]
+    }));
   };
 }
 

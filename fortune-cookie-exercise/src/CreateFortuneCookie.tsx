@@ -6,11 +6,10 @@ import * as React from "react";
 // Implement "IFortuneCookieState"
 // should have string field "cookieText"
 
-export class CreateFortuneCookie extends React.Component<any, any> {
-  // Get rid of "any" types
-  public state = { cookieText: "" };
+// Add proper member visibility types to App methods
 
-  public render() {
+export class CreateFortuneCookie extends React.Component<any, any> {
+  render() {
     return (
       <div className="create-cookie-wrapper">
         <input
@@ -26,7 +25,7 @@ export class CreateFortuneCookie extends React.Component<any, any> {
     );
   }
 
-  private addFortuneCookie = () => {
+  addFortuneCookie = () => {
     this.props.onAddFortuneCookie(this.state.cookieText);
     this.setState({ cookieText: "" });
   };

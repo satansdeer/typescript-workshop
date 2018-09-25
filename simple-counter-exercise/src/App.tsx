@@ -1,15 +1,13 @@
 import * as React from "react";
 import "./App.css";
 
-// Define ICounterProps interface
+// Define the ICounterProps interface
 // should include the "state" field of type "number"
 
 // Set proper visibility levels for class properties
 // public/protected/private
 
-class App extends React.Component<{}, ICounterProps> {
-  state = { counter: 0 };
-
+class App extends React.Component<{}, ICounterState> {
   render() {
     return (
       <div className="container">
